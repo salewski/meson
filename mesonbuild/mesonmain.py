@@ -248,6 +248,8 @@ def run_script_command(args):
         cmdfunc = abc.run
     elif cmdname == 'dist':
         import mesonbuild.scripts.dist as abc
+    elif cmdname == 'coverage':
+        import mesonbuild.scripts.coverage as abc
         cmdfunc = abc.run
     else:
         raise MesonException('Unknown internal command {}.'.format(cmdname))
